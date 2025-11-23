@@ -1,3 +1,5 @@
+#ifndef __MEMORY_POOL_H__
+#define __MEMORY_POOL_H__
 #include <stdio.h>
 #include <pthread.h>
 #include <stdlib.h>
@@ -165,3 +167,4 @@ static bool is_mp_ptr(memory_pool_t* mp, void* ptr) {
     return (((size_t)((const char*)ptr - (const char*)mp->mp_block->__mem_start) < mp->mp_block->__size) &&
     (((const char*)ptr - (const char*)mp->mp_block->__mem_start) >= 0));
 }
+#endif
