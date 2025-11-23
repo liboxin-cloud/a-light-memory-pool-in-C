@@ -14,7 +14,6 @@ run: $(TARGET)
 
 clean:
 	rm -f $(TARGET)
-
 rebuild: clean all
 
 .PHONY: all run clean rebuild
